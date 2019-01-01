@@ -22,7 +22,10 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 		//ループさせない処理
 		String pay = session.get("pay").toString();
 		String loginUserId = session.get("login_user_id").toString();
-		ArrayList<CartDTO> purchaseList = (ArrayList<CartDTO>) session.get("myCartList");
+		Object myCartList = session.get("myCartList");
+		myCartList = new ArrayList<CartDTO>();
+		@SuppressWarnings("unchecked")
+		ArrayList<CartDTO> purchaseList = (ArrayList<CartDTO>) myCartList;
 
 		int result = 0;
 		//ループさせる処理
@@ -42,7 +45,7 @@ public class PurchaseCompleteAction extends ActionSupport implements SessionAwar
 			}
 		}
 
-		//購入処理がうまくいったらカートの中を削除
+		//購入処理が成功したらカートの中を削除
 		if (result == purchaseList.size()) {
 			CartDAO cartDAO = new CartDAO();
 			cartDAO.emptyUserCart(loginUserId);
