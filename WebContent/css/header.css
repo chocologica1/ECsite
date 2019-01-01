@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+	list-style: none;
+}
+
+body {
+	font-family: YuGothic, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	width: 100%;
+	min-width: 1000px;
+	line-height: 1.6em;
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: #333;
+	background-color: #faf9f9;
+}
+
+/* ヘッダーのスタイル */
+header {
+	height: 100px;
+	background-color: #488b8f;
+	color: #faf9f9;
+}
+
+.container {
+	width: 80%;
+	max-width: 980px;
+	margin: auto;
+}
+
+.header-flex {
+	width: 100%;
+	height: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+/*  border: 1px solid orange; 確認用 */
+}
+
+.header-logo {
+	width: 250px;
+	height: 65px;
+	text-align: left;
+	font-family: "Century Gothic";
+	padding-top: 10px;
+/* 	border: 1px solid pink; 確認用 */
+}
+
+.logo1 {
+	font-size: 40px;
+	font-weight: 500;
+	padding-bottom: 5px;
+}
+
+.logo2 {
+	font-size:20px;
+	letter-spacing: 2px;
+}
+
+.header-menu{
+	height: 65px;
+	width: 60%;
+/* 	border: 1px solid pink; 確認用 */
+}
+
+ul {
+	display: flex;
+}
+
+ul li {
+	width: 20%;
+	height: 65px;
+	line-height: 65px;
+	margin-left: auto; /*flexboxの右寄せ*/
+	display: block;
+	border-left: 2px solid  #faf9f9;
+	letter-spacing: 2px;
+	font-size: 16px;
+}
+
+header a {
+	text-decoration: none;
+	color: #faf9f9;
+	display: block;
+}
+
+.header-button {
+	background-color: #faf9f9;
+	border: none;
+}
+
+/* フッターのスタイル */
+footer {
+	height: 60px;
+	margin-top: 60px;
+	background-color: #488b8f;
+	color: #faf9f9;
+	line-height: 60px;
+	font-family: "Century Gothic";
+}

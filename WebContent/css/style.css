@@ -1,0 +1,348 @@
+@charset "UTF-8";
+
+html, body, ul, ol, li, h1, h2, h3, h4, h5, h6, p, form, input, div {
+	margin: 0;
+	padding
+	:
+
+	0;
+}
+
+* {
+	box-sizing: border-box;
+	list-style: none;
+}
+
+body {
+	font-family: YuGothic, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	width: 100%;
+	min-width: 1000px;
+	line-height: 1.6em;
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: #333;
+	background-color: #faf9f9;
+}
+
+/* ======枠組み====== */
+.container {
+	width: 80%; max-width : 980px;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 980px;
+}
+
+#main {
+	min-height: 1000px;
+}
+
+/* ======共通====== */
+.index {
+	padding: 50px 0;
+}
+
+.index h2 {
+	text-align: left;
+	border-left: 5px solid #5ea3a3;
+	font-size: 24px;
+	line-height: 2em;
+	padding-left: 10px;
+}
+
+.title {
+	font-size: 20px;
+	padding-bottom: 1em;
+}
+
+table {
+	margin: 10px auto;
+}
+
+td, th {
+	padding: 1px 2px;
+}
+
+.error {
+	color: #ff6473;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+/* ======home.jsp===== */
+.welcome-message {
+	padding-top: 40px;
+	font-size: 15px;
+}
+
+.top-image {
+	width: 100%;
+	padding: 40px 0;
+}
+
+.slide {
+	min-height: 1px;
+	min-width: 1px;
+}
+
+.slide img {
+	width: 100%;
+}
+
+.menu-box {
+	width: 100%;
+}
+
+.menu-button {
+	width: 100%;
+	color: #333;
+	border-style: none;
+	line-height: 100px;
+	background-color: rgba(173, 210, 210, 1);
+	letter-spacing: 5px;
+	font-size: 20px;
+	margin: 20px 0;
+}
+
+.menu-button:hover {
+	background-color: rgba(94, 163, 163, 0.7);
+}
+
+/* ======item.jsp====== */
+.items-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.item-box {
+	width: 200px;
+	border: 1px solid #757882;
+	margin: 0 10px;
+	padding: 10px;
+}
+
+.item-image {
+	width: 100%;
+	height: auto;
+}
+
+.image {
+	width: 100%;
+}
+
+.purchase-button {
+	/* 	background-color: #ff6473; ピンク*/
+	background-color: #ff9234; /*オレンジ*/
+	border-style: none;
+	padding: 4px;
+	width: 80px;
+}
+
+/* ======buyItem.jsp====== */
+.buyitem-flex {
+	display: flex;
+	margin-top: 60px;
+	justify-content: space-between;
+}
+
+.item-column {
+	width: 55%;
+}
+
+.buyitem-name {
+	text-align: left;
+	border-left: 5px solid #5ea3a3;
+	font-size: 24px;
+	line-height: 2em;
+	padding-left: 10px;
+}
+
+.buyitem-category {
+	text-align: left;
+	color: #757882;
+	padding-left: 15px;
+	padding-bottom: 1em;
+}
+
+.buyitem-price {
+	text-align: right;
+	font-size: 20px;
+	margin-bottom: 1em;
+}
+
+.message-wrapper {
+	background-color: rgba(173, 210, 210, 0.5);
+	height: 100px;
+	line-height: 100px;
+	margin: 40px 0;
+}
+
+.cart-wrapper {
+	background-color: rgba(173, 210, 210, 0.5);
+	height: 100px;
+	padding: 20px;
+	margin: 40px 0;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+.count-box {
+	width: 50%;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.count-box p {
+	font-size: 15px;
+	line-height: 60px;
+}
+
+.cart-box {
+	width: 50%;
+}
+
+.cart-button {
+	width: 100%;
+	height: 60px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(94, 163, 163, 1);
+	color: #faf9f9;
+	font-size: 20px;
+}
+
+.cart-button:hover {
+	background-color: rgba(94, 163, 163, 0.7);
+}
+
+.stock-error {
+	width: 100%;
+	text-align: right;
+	color: #ff6473;
+}
+
+.itemselect-box {
+	width: 30%;
+	margin-left: auto;
+}
+
+.itemselect-button {
+	width: 100%;
+	border: none;
+	background-color: #faf9f9;
+	color: #ff6473;
+	font-size: 14px;
+	text-align: right;
+}
+
+/* ======purchase系====== */
+.select {
+	border: 1px solid #333;
+	padding: 10px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.radio {
+	display: inline-block;
+	text-align: left;
+	margin-top: 5px;
+}
+
+/* ======cart.jsp====== */
+.cart-image {
+	width: 100px;
+}
+
+.item-link {
+	color: #5ea3a3;
+	text-decoration: none;
+}
+
+.item-link:hover {
+	text-decoration: underline;
+}
+
+/* ======login.jsp===== */
+.login-wrapper {
+	display: flex;
+	background-color: rgba(173, 210, 210, 0.5);
+	height: 450px;
+	padding: 50px 0;
+	text-align: left;
+	color: #757882;
+}
+
+.login-box, .user-box {
+	width: 50%;
+	padding: 0 50px;
+}
+
+.user-box {
+	border-left: 1px solid  rgba(117, 120, 120, 0.5);
+}
+
+.color333 {
+	color: #333;
+	padding-bottom: 1.5em;
+}
+
+.login-field {
+	width: 100%;
+	height: 3em;
+	padding-left: 1em;
+	margin-bottom: 1em;
+	background-color: #faf9f9;
+	border: none;
+	font-size: 14px;
+}
+
+.login-button-box {
+	width: 60%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.login-button {
+	width: 100%;
+	background-color: rgba(94, 163, 163, 1);
+	line-height: 50px;
+	font-size: 16px;
+	color: #faf9f9;
+	letter-spacing: 2px;
+	border: none;
+}
+
+.login-button:hover {
+	background-color: rgba(94, 163, 163, 0.7);
+}
+
+
+/* ======userCreate系====== */
+.create-wrapper {
+	background-color: rgba(173, 210, 210, 0.5);
+	height: 400px;
+	padding: 50px;
+	text-align: left;
+	color: #757882;
+}
+
+.form-wrapper {
+	width: 30%;
+	margin: auto;
+}
+
+
+/* ======横並びボタン======= */
+/* .center { */
+/* 	display: flex; */
+/* 	width: 160px; */
+/* 	margin: 0 auto; */
+/* } */
+
+/* .button { */
+/* 	width: 80px; */
+/* } */
