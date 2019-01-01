@@ -5,7 +5,8 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
-	<title>PurchaseHistoryDeleteComplete画面</title>
+	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+	<title>購入履歴削除完了</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" flush="true" />

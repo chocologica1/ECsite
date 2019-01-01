@@ -5,7 +5,8 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
-	<title>MyCart画面</title>
+	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+	<title>カート</title>
 	<style type="text/css">
 	/* ======横並びボタン======= */
 		.center {

@@ -4,8 +4,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="./css/style.css" />
-	<title>MyCartDeleteComplete画面</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+	<title>カート削除完了</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" flush="true" />

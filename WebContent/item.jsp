@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<link rel="stylesheet" type="text/css" href="./css/item.css" />
-	<title>Item画面</title>
+	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+	<title>商品一覧</title>
 </head>
 <body>
 	<jsp:include page="header.jsp" flush="true" />

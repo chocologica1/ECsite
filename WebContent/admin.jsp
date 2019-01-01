@@ -5,7 +5,8 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
-	<title>Admin画面</title>
+	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+	<title>管理者トップ</title>
 	<style type="text/css">
 	/* ======flexbox====== */
 		.flex {
