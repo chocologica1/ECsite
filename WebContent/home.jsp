@@ -3,12 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
-	<meta http-equiv="Content-Style-Type" content="text/css"/>
-	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
-	<meta http-equiv="imagetoolbar" content="no"/>
-	<meta name="description" content=""/>
-	<meta name="keywords" content=""/>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.css">

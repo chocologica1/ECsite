@@ -3,12 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
-	<meta http-equiv="Content-Style-Type" content="text/css"/>
-	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
-	<meta http-equiv="imagetoolbar" content="no"/>
-	<meta name="description" content=""/>
-	<meta name="keywords" content=""/>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
 	<title>UserCreateConfirm画面</title>
 	<style type="text/css">
