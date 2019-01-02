@@ -18,12 +18,18 @@ public class AdminLoginAction extends ActionSupport implements SessionAware {
 
 	//executeメソッド
 	public String execute() {
+
+		//未入力の時
+		if(adminId.equals("") || adminPass.equals("")) {
+			message = "未入力の項目があります。";
+			return ERROR;
+		}
+
 		//戻り値の初期化
 		String result = ERROR;
 		//インスタンス化
 		AdminLoginDAO dao = new AdminLoginDAO();
 		AdminLoginDTO dto = new AdminLoginDTO();
-
 		//daoメソッドの実行
 		dto = dao.getAdminInfo(adminId, adminPass);
 		//ログイン判定
@@ -35,11 +41,11 @@ public class AdminLoginAction extends ActionSupport implements SessionAware {
 		}
 		//ログイン失敗
 		else {
-			message = "IDとパスワードが違います。";
+			message = "IDまたはパスワードが違います。";
 			result = ERROR;
 		}
-
 		return result;
+
 	}
 
 	//ゲッターセッター

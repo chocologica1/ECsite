@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/form.css"/>
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 	<title>ログイン</title>
 </head>
@@ -15,27 +16,32 @@
 		<div class="index">
 			<h2>ログイン</h2>
 		</div>
-		<div class="login-wrapper">
+		<s:if test="message != ''">
+			<div class="error">
+				<s:property value="message"/>
+			</div>
+		</s:if>
+		<div class="login-wrapper color-box">
 			<div class="login-box">
 				<p class="title">ログイン</p>
-				<p class="color333">ショップ会員の方、【Nyamuse-ID】をお持ちの方は以下よりログインしてください。</p>
-				<s:form action="LoginAction" theme="simple">
+				<p class="sentence">ショップ会員の方、【Nyamuse-ID】をお持ちの方は以下よりログインしてください。</p>
+				<s:form action="LoginAction">
 					<label>ログインID</label><br>
-					<s:textfield name="loginUserId" cssClass="login-field"/>
+					<s:textfield name="loginUserId" autocomplete="off" cssClass="input-field"/>
 					<br>
 					<label>パスワード</label><br>
-					<s:password name="loginPassword" cssClass="login-field"/>
+					<s:password name="loginPassword" autocomplete="new-password" cssClass="input-field"/>
 					<br>
-					<div class="login-button-box">
-						<s:submit value="ログイン" cssClass="login-button button"/>
+					<div class="center-button-box">
+						<s:submit value="ログイン" cssClass="button"/>
 					</div>
 				</s:form>
 			</div>
 			<div class="user-box">
 				<p class="title">会員登録</p>
-				<p class="color333">はじめてご利用いただく際には会員登録(無料)が必要となります。<br>会員登録がお済みで無い方はこちらから登録をお願いいたします。</p>
-				<s:form action="UserCreateAction" theme="simple" cssClass="login-button-box">
-					<s:submit value="新規登録はこちら" cssClass="login-button button" />
+				<p class="sentence">はじめてご利用いただく際には会員登録(無料)が必要となります。<br>会員登録がお済みで無い方はこちらから登録をお願いいたします。</p>
+				<s:form action="UserCreateAction" cssClass="center-button-box">
+					<s:submit value="新規登録はこちら" cssClass="button" />
 				</s:form>
 			</div>
 		</div>

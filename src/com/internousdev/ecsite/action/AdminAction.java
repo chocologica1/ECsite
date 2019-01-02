@@ -8,6 +8,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class AdminAction extends ActionSupport implements SessionAware {
 	private Map<String, Object> session;
+	private String message = "";
 
 	public String execute() {
 		//管理者ログインへ
@@ -24,5 +25,8 @@ public class AdminAction extends ActionSupport implements SessionAware {
 	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
+	}
+	public String getMessage() {
+		return message;
 	}
 }

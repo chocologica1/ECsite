@@ -14,9 +14,17 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	private String loginPassword;
 	private String userName;
 	private Map<String, Object> session;
+	private String message = "";
 
 	//executeメソッド
 	public String execute() {
+
+		//未入力エラー
+		if(loginUserId.equals("") || loginPassword.equals("")) {
+			message = "未入力の項目があります。";
+			return ERROR;
+		}
+
 		//戻り値の初期化
 		String result = ERROR;
 		//インスタンス化
@@ -29,8 +37,11 @@ public class LoginAction extends ActionSupport implements SessionAware {
 			session.put("login_user_id", loginDTO.getLoginUserId()); //ログイン判定用
 			userName = loginDTO.getUserName(); //◯◯さんを表示させる用
 			session.put("userName", userName);
+		} else {
+			message = "IDまたはパスワードが違います。";
 		}
 		return result;
+
 	}
 
 	//ゲッターセッター
@@ -49,17 +60,18 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	public String getUserName() {
 		return userName;
 	}
-
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-
 	public Map<String, Object> getSession() {
 		return this.session;
 	}
 	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
+	}
+	public String getMessage() {
+		return message;
 	}
 
 }
