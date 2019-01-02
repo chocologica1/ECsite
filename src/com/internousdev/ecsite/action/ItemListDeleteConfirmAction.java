@@ -13,7 +13,7 @@ public class ItemListDeleteConfirmAction extends ActionSupport {
 	//executeメソッド
 	public String execute() {
 		ItemListDAO itemListDAO = new ItemListDAO();
-		deleteItemList = itemListDAO.getItemInfo();
+		deleteItemList = itemListDAO.getAllItemList();
 		return SUCCESS;
 	}
 

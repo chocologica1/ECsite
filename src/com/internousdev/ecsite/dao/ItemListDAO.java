@@ -11,7 +11,7 @@ import com.internousdev.ecsite.util.DBConnector;
 
 public class ItemListDAO {
 	//メソッド(seect文、戻り値List)
-	public ArrayList<ItemListDTO> getItemInfo() {
+	public ArrayList<ItemListDTO> getAllItemList() {
 		//インスタンス化
 		ArrayList<ItemListDTO> itemListDTOList = new ArrayList<ItemListDTO>();
 		DBConnector db = new DBConnector();

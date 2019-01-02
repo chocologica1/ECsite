@@ -15,7 +15,7 @@ public class ItemListAction extends ActionSupport{
 		//インスタンス化
 		ItemListDAO dao = new ItemListDAO();
 		//DAOメソッド実行→Listに代入
-		itemList = dao.getItemInfo();
+		itemList = dao.getAllItemList();
 		return SUCCESS;
 	}
 
