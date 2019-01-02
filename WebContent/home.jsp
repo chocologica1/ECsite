@@ -42,17 +42,18 @@
 				</div>
 			</div>
 		</div>
+		<!-- メニューボタン -->
 		<div class="contents-wrapper">
 	 		<div class="container">
 	 			<s:form action="ItemAction" cssClass="menu-box">
 					<s:submit value="GOODS" type="button" cssClass="menu-button"/>
 				</s:form>
-				<s:if test="#session.login_user_id == null">
+				<s:if test="!#session.containsKey('login_user_id')">
 					<s:form action="LoginConfirmAction" cssClass="menu-box">
 						<s:submit value="LOGIN" type="button" cssClass="menu-button"/>
 					</s:form>
 				</s:if>
-				<s:elseif test="#session.login_user_id != null">
+				<s:elseif test="#session.containsKey('login_user_id')">
 					<s:form action="MyPageAction" cssClass="menu-box">
 						<s:submit value="MY PAGE" type="button" cssClass="menu-button"/>
 					</s:form>

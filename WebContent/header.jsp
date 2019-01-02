@@ -12,7 +12,7 @@
 				<s:if test="#session.login_user_id == null">
 					<ul class="header-list">
 						<li><a href='<s:url action="GoHomeAction"/>'>ホーム</a></li>
-						<li><a href='<s:url action="LoginAction"/>'>ログイン</a></li>
+						<li><a href='<s:url action="LoginConfirmAction"/>'>ログイン</a></li>
 						<li><a href='<s:url action="UserCreateAction"/>'>会員登録</a></li>
 					</ul>
 				</s:if>

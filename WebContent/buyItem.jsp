@@ -71,7 +71,7 @@
 						</s:elseif>
 					</div>
 					<div class="itemselect-box">
-						<s:form action="ItemAction" theme="simple">
+						<s:form action="ItemAction">
 							<s:submit value="＞商品一覧へもどる" cssClass="itemselect-button"/>
 						</s:form>
 					</div>
