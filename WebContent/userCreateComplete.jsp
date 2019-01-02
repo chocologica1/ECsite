@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+	<meta http-equiv="refresh" content="5;URL=/ecsite/">
 	<title>ユーザー登録完了</title>
 </head>
 <body>
@@ -15,12 +16,8 @@
 		<div class="index">
 			<h2>会員登録</h2>
 		</div>
-		<div>
+		<div class="complete">
 			<h3>ユーザーの登録が完了しました。</h3>
-			<div>
-				<br>
-				<a href='<s:url action="HomeAction"/>'>ログインへ</a>
-			</div>
 		</div>
 	 </div>
 	</div>

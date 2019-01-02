@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/form.css" />
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 	<title>管理者ログイン</title>
 </head>
@@ -15,23 +16,26 @@
 			<div class="index">
 				<h2>管理者ログイン</h2>
 			</div>
-			<div>
-				<!-- errorのあと -->
+			<!-- errorのあと -->
+			<s:if test="message != ''">
 				<div class="error">
-				<s:if test="message != ''">
-					<h3><s:property value="message"/></h3>
-				</s:if>
+					<p><s:property value="message" /></p>
 				</div>
-
-				<h3>IDとパスワードを入力してください。</h3>
-				<s:form action="AdminLoginAction">
-					<s:textfield name="adminId"/>
-					<s:password name="adminPass"/>
-					<s:submit value="ログイン"/>
+			</s:if>
+			<div class="color-box">
+				<s:form action="AdminLoginAction" cssClass="form-box">
+					<label>管理者ID</label>
+					<br>
+					<s:textfield name="adminId" cssClass="input-field"/>
+					<br>
+					<label>管理者パスワード</label>
+					<br>
+					<s:password name="adminPass" cssClass="input-field"/>
+					<br>
+					<div class="center-button-box">
+						<s:submit value="ログイン" cssClass="button"/>
+					</div>
 				</s:form>
-			</div>
-			<div>
-				Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
 			</div>
 		</div>
 	</div>

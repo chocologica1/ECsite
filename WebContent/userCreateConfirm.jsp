@@ -5,20 +5,9 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/form.css"/>
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 	<title>ユーザー登録確認</title>
-	<style type="text/css">
-		.center {
-			display: flex;
-			width: 160px;
-			margin: 0 auto;
-		}
-
-		.button {
-			width: 80px;
-			margin: 10px;
-		}
-	</style>
 </head>
 <body>
 	<jsp:include page="header.jsp" flush="true" />
@@ -27,23 +16,24 @@
 		<div class="index">
 			<h2>会員登録</h2>
 		</div>
-		<div>
-			<h3>登録する内容は以下でよろしいですか。</h3>
-			<table>
+		<div class="color-box">
+			<p>ご登録内容は以下でよろしいですか。</p>
+			<br>
+			<table class="confirm-box">
 			<s:form action="UserCreateCompleteAction">
-				<tr id="box">
+				<tr>
 					<td><label>ログインID</label></td>
 					<td>
 						<s:property value="loginUserId" escape="false"/>
 					</td>
 				</tr>
-				<tr id="box">
+				<tr>
 					<td><label>パスワード</label></td>
 					<td>
 						<s:property value="loginPassword" escape="false"/>
 					</td>
 				</tr>
-				<tr id="box">
+				<tr>
 					<td><label>ユーザー名</label></td>
 					<td>
 						<s:property value="userName" escape="false"/>
@@ -51,22 +41,20 @@
 				</tr>
 			</s:form>
 			</table>
-		</div>
-		<div>
-			<div class="center">
-				<div class="button">
-					<s:form action="UserCreateAction">
-						<s:submit value="戻って修正する"/>
+			<div class="center-flex-box">
+				<div class="flex-button-box">
+					<s:form action="UserCreateAction" cssClass="">
+						<s:submit value="戻って修正する" cssClass="button back"/>
 					</s:form>
 				</div>
-				<div class="button">
+				<div class="flex-button-box">
 					<s:form action="UserCreateCompleteAction">
-						<s:submit value="完了"/>
+						<s:submit value="完了" cssClass="button ok"/>
 					</s:form>
 				</div>
 			</div>
+			</div>
 		</div>
-	 </div>
 	</div>
 	<jsp:include page="footer.jsp" flush="true"/>
 </body>

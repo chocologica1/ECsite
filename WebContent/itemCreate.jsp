@@ -16,16 +16,18 @@
 				<h2>商品追加</h2>
 			</div>
 			<div>
-				<div class="error">
 				<!-- ItemCreateConfirmActionの返り値がerrorの時エラーメッセージを表示 -->
 				<s:if test="errorMessage != ''">
-					<s:property value="errorMessage"/>
+					<div class="error">
+						<s:property value="errorMessage"/>
+					</div>
 				</s:if>
 				<!-- ItemCreateCompleteActionの返り値がerrorの時エラーメッセージを表示 -->
 				<s:if test="itemCreateError != ''">
-					<s:property value="itemCreateError"/>
+					<div class="error">
+						<s:property value="itemCreateError"/>
+					</div>
 				</s:if>
-				</div>
 
 				<table>
 					<s:form action="ItemCreateConfirmAction">

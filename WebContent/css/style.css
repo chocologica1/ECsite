@@ -19,7 +19,7 @@ body {
 	min-width: 1000px;
 	line-height: 1.6em;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #333;
 	background-color: #faf9f9;
 }
@@ -32,9 +32,10 @@ body {
 }
 
 #main {
-	min-height: 1000px;
+	min-height: calc(100vh - 260px);
 }
 
+/* ページタイトル */
 .index {
 	padding: 50px 0;
 }
@@ -42,30 +43,93 @@ body {
 .index h2 {
 	text-align: left;
 	border-left: 5px solid #5ea3a3;
-	font-size: 24px;
+	font-size: 28px;
 	line-height: 2em;
 	padding-left: 10px;
 }
 
+/* 見出し */
 .title {
 	font-size: 20px;
 	padding-bottom: 1em;
 }
 
-table {
-	margin: 10px auto;
-}
+/* table { */
+/* 	margin: 10px auto; */
+/* } */
 
-td, th {
-	padding: 1px 2px;
+/* td, th { */
+/* 	padding: 1px 2px; */
+/* } */
+
+/* メッセージ */
+.error, .info {
+	width: 100%;
+	height: 3em;
+	line-height: 3em;
+	margin-bottom: 50px;
+	padding-left: 1em;
+	border: 1px solid;
+	text-align: left;
 }
 
 .error {
 	color: #ff6473;
+	border-color: #ff6473;
+}
+
+.info {
+	color: #2C5A6A;
+	border-color: #2C5A6A;
+}
+
+/* ボタン */
+.center-button-box {
+	width: 60%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.button {
+	width: 100%;
+	background-color: rgba(94, 163, 163, 1);
+	line-height: 50px;
+	font-size: 16px;
+	color: #faf9f9;
+	letter-spacing: 2px;
+	border: none;
 }
 
 .button:hover {
+	background-color: rgba(94, 163, 163, 0.7);
 	cursor: pointer;
+}
+
+.center-flex-box {
+	padding-top: 20px;
+	display: flex;
+	width: 50%;
+	margin: auto;
+	justify-content: space-around;
+}
+
+.flex-button-box {
+	width: 40%;
+}
+
+/* 入力欄 */
+input {
+	outline: 0;
+}
+
+input:focus {
+	border: 1px solid #ff6473;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 40px;
 }
 
 /* ======home.jsp===== */
@@ -105,136 +169,8 @@ td, th {
 
 .menu-button:hover {
 	background-color: rgba(94, 163, 163, 0.7);
+	cursor: pointer;
 }
-
-/* /* ======item.jsp====== */ */
-/* .items-wrapper { */
-/* 	display: flex; */
-/* 	justify-content: space-between; */
-/* 	margin-bottom: 40px; */
-/* } */
-
-/* .item-box { */
-/* 	width: 200px; */
-/* 	border: 1px solid #757882; */
-/* 	margin: 0 10px; */
-/* 	padding: 10px; */
-/* } */
-
-/* .item-image { */
-/* 	width: 100%; */
-/* 	height: auto; */
-/* } */
-
-/* .image { */
-/* 	width: 100%; */
-/* } */
-
-/* .purchase-button { */
-/* 	/* 	background-color: #ff6473; ピンク*/ */
-/* 	background-color: #ff9234; オレンジ */
-/* 	border-style: none; */
-/* 	padding: 4px; */
-/* 	width: 80px; */
-/* } */
-
-/* /* ======buyItem.jsp====== */ */
-/* .buyitem-flex { */
-/* 	display: flex; */
-/* 	margin-top: 60px; */
-/* 	justify-content: space-between; */
-/* } */
-
-/* .item-column { */
-/* 	width: 55%; */
-/* } */
-
-/* .buyitem-name { */
-/* 	text-align: left; */
-/* 	border-left: 5px solid #5ea3a3; */
-/* 	font-size: 24px; */
-/* 	line-height: 2em; */
-/* 	padding-left: 10px; */
-/* } */
-
-/* .buyitem-category { */
-/* 	text-align: left; */
-/* 	color: #757882; */
-/* 	padding-left: 15px; */
-/* 	padding-bottom: 1em; */
-/* } */
-
-/* .buyitem-price { */
-/* 	text-align: right; */
-/* 	font-size: 20px; */
-/* 	margin-bottom: 1em; */
-/* } */
-
-/* .message-wrapper { */
-/* 	background-color: rgba(173, 210, 210, 0.5); */
-/* 	height: 100px; */
-/* 	line-height: 100px; */
-/* 	margin: 40px 0; */
-/* } */
-
-/* .cart-wrapper { */
-/* 	background-color: rgba(173, 210, 210, 0.5); */
-/* 	height: 100px; */
-/* 	padding: 20px; */
-/* 	margin: 40px 0; */
-/* 	display: flex; */
-/* 	justify-content: flex-end; */
-/* 	flex-wrap: wrap; */
-/* } */
-
-/* .count-box { */
-/* 	width: 50%; */
-/* 	text-align: right; */
-/* 	padding-right: 20px; */
-/* } */
-
-/* .count-box p { */
-/* 	font-size: 15px; */
-/* 	line-height: 60px; */
-/* } */
-
-/* .cart-box { */
-/* 	width: 50%; */
-/* } */
-
-/* .cart-button { */
-/* 	width: 100%; */
-/* 	height: 60px; */
-/* 	border: none; */
-/* 	border-radius: 5px; */
-/* 	background-color: rgba(94, 163, 163, 1); */
-/* 	color: #faf9f9; */
-/* 	font-size: 20px; */
-/* } */
-
-/* .cart-button:hover { */
-/* 	background-color: rgba(94, 163, 163, 0.7); */
-/* } */
-
-/* .stock-error { */
-/* 	width: 100%; */
-/* 	text-align: right; */
-/* 	color: #ff6473; */
-/* } */
-
-/* .itemselect-box { */
-/* 	width: 30%; */
-/* 	margin-left: auto; */
-/* } */
-
-/* .itemselect-button { */
-/* 	width: 100%; */
-/* 	border: none; */
-/* 	background-color: #faf9f9; */
-/* 	color: #ff6473; */
-/* 	font-size: 14px; */
-/* 	text-align: right; */
-/* } */
 
 /* ======purchase系====== */
 .select {
@@ -263,88 +199,6 @@ td, th {
 .item-link:hover {
 	text-decoration: underline;
 }
-
-/* ======login.jsp===== */
-.login-wrapper {
-	display: flex;
-	background-color: rgba(173, 210, 210, 0.5);
-	height: 450px;
-	padding: 50px 0;
-	text-align: left;
-	color: #757882;
-}
-
-.login-box, .user-box {
-	width: 50%;
-	padding: 0 50px;
-}
-
-.user-box {
-	border-left: 1px solid  rgba(117, 120, 120, 0.5);
-}
-
-.color333 {
-	color: #333;
-	padding-bottom: 1.5em;
-}
-
-.login-field {
-	width: 100%;
-	height: 3em;
-	padding-left: 1em;
-	margin-bottom: 1em;
-	background-color: #faf9f9;
-	border: none;
-	font-size: 14px;
-}
-
-.login-button-box {
-	width: 60%;
-	margin: auto;
-	margin-top: 20px;
-}
-
-.login-button {
-	width: 100%;
-	background-color: rgba(94, 163, 163, 1);
-	line-height: 50px;
-	font-size: 16px;
-	color: #faf9f9;
-	letter-spacing: 2px;
-	border: none;
-}
-
-.login-button:hover {
-	background-color: rgba(94, 163, 163, 0.7);
-}
-
-
-/* ======userCreate系====== */
-.create-wrapper {
-	background-color: rgba(173, 210, 210, 0.5);
-	height: 400px;
-	padding: 50px;
-	text-align: left;
-	color: #757882;
-}
-
-.form-wrapper {
-	width: 30%;
-	margin: auto;
-}
-
-
-/* ======横並びボタン======= */
-/* .center { */
-/* 	display: flex; */
-/* 	width: 160px; */
-/* 	margin: 0 auto; */
-/* } */
-
-/* .button { */
-/* 	width: 80px; */
-/* } */
-
 
 /*====== ヘッダーのスタイル ======*/
 header {
@@ -416,8 +270,9 @@ header a {
 
 /*====== フッターのスタイル ======*/
 footer {
+	width: 100%;
 	height: 60px;
-	margin-top: 60px;
+	margin-top: 100px;
 	background-color: #488b8f;
 	color: #faf9f9;
 	line-height: 60px;
