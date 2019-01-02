@@ -13,7 +13,7 @@
 	<div id="main">
 	 <div class="container">
 		 <div class="index">
-	 			<h2><s:property value="#session.login_user_id"/> さんのマイページ</h2>
+	 			<h2><s:property value="#session.userName"/> さんのマイページ</h2>
 	 	</div>
 	 	<div class="contents-wrapper">
 	 		<s:form action="PurchaseHistoryAction" cssClass="menu-box">
