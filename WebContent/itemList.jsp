@@ -37,8 +37,8 @@
 						<s:iterator value="itemList">
 							<tr>
 								<td>
-									<s:checkbox name="checked" value="checked"/>
-									<s:hidden name="id" value="id"/>
+<%-- 									<s:checkbox name="checked" value="checked"/> --%>
+<%-- 									<s:hidden name="id" value="id"/> --%>
 								</td>
 								<td>
 									<s:property value="id"/>
@@ -65,7 +65,7 @@
 					</table>
 					<div>
 						<s:form action="ItemListDeleteConfirmAction" cssClass="center-button-box">
-							<s:submit value="削除" cssClass="button"/>
+							<s:submit value="全削除" cssClass="button"/>
 						</s:form>
 					</div>
 				</s:if>
