@@ -56,3 +56,7 @@ td {
 	font-size: 14px;
 	text-align: right;
 }
+
+.return-button:hover {
+	cursor: pointer;
+}
