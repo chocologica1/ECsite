@@ -1,7 +1,6 @@
 # ECsite
 ### 開発環境
-Eclipse 4.7
- Struts 2.3
+Eclipse 4.7 / Struts 2.3
 
 ### 制作時期
 2018年11月 プログラマーカレッジにて
