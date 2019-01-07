@@ -22,8 +22,8 @@
 	 		<s:form action="MyCartAction" cssClass="menu-box">
 	 			<s:submit value="カートをみる" cssClass="menu-button"/>
 	 		</s:form>
-	 		<s:form action="xxx" cssClass="menu-box">
-	 			<s:submit value="アカウント設定　" cssClass="menu-button"/>
+	 		<s:form cssClass="menu-box">
+	 			<s:submit value="アカウント設定（※未実装）" cssClass="menu-button"/>
 	 		</s:form>
 	 	</div>
 	 </div>
