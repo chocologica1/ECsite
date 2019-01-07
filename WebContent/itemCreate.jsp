@@ -33,15 +33,15 @@
 					<s:form action="ItemCreateConfirmAction">
 						<tr>
 							<td>商品名</td>
-							<td><input type="text" name="itemName" size="18"/></td>
+							<td><input type="text" name="itemName" class="textfield"/></td>
 						</tr>
 						<tr>
 							<td>値段</td>
-							<td><input type="text" name="itemPrice" size="16" style="text-align:right;"/>円</td>
+							<td><input type="text" name="itemPrice" class="textfield"/>円</td>
 						</tr>
 						<tr>
 							<td>在庫数</td>
-							<td><input type="text" name="itemStock" size="16" style="text-align:right;"/>個</td>
+							<td><input type="text" name="itemStock" class="textfield"/>個</td>
 						</tr>
 						<s:submit value="登録"/>
 					</s:form>

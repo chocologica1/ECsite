@@ -122,7 +122,7 @@ input {
 	outline: 0;
 }
 
-input:focus {
+.textfield:focus, .input-field:focus {
 	border: 1px solid #ff6473;
 }
 
@@ -165,6 +165,7 @@ table {
 	letter-spacing: 5px;
 	font-size: 20px;
 	margin: 20px 0;
+	outline: 0;
 }
 
 .menu-button:hover {
