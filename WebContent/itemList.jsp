@@ -26,7 +26,6 @@
 				<s:if test="itemList.size() > 0">
 					<table>
 						<tr>
-<!-- 							<th></th> -->
 							<th>ID</th>
 							<th>商品名</th>
 							<th>商品画像</th>
@@ -36,10 +35,6 @@
 						</tr>
 						<s:iterator value="itemList">
 							<tr>
-								<td>
-<%-- 									<s:checkbox name="checked" value="checked"/> --%>
-<%-- 									<s:hidden name="id" value="id"/> --%>
-								</td>
 								<td>
 									<s:property value="id"/>
 								</td>
