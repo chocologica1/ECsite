@@ -26,11 +26,11 @@
 				<s:form action="AdminLoginAction" cssClass="form-box">
 					<label>管理者ID</label>
 					<br>
-					<s:textfield name="adminId" cssClass="input-field"/>
+					<s:textfield name="adminId" cssClass="input-field" autocomplete="off"/>
 					<br>
 					<label>管理者パスワード</label>
 					<br>
-					<s:password name="adminPass" cssClass="input-field"/>
+					<s:password name="adminPass" cssClass="input-field" autoconplete="new-password"/>
 					<br>
 					<div class="center-button-box">
 						<s:submit value="ログイン" cssClass="button"/>
