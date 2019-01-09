@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div>
-				<s:form action="AdminLogoutAction" cssClass="return-button-box">
+				<s:form action="LogoutAction" cssClass="return-button-box">
 					<s:submit value="＞管理者ログアウト" cssClass="return-button" />
 				</s:form>
 			</div>

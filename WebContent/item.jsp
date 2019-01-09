@@ -23,8 +23,8 @@
 							<img src='./image/item/<s:property value="id"/>.png' class="image" alt="item"/>
 						</div>
 						<div class="item-info">
-							<span class="left"><s:property value="itemName"/></span>
-							<span class="right">¥<s:property value="itemPrice"/></span>
+							<span><s:property value="itemName"/></span>
+							<span>¥<s:property value="itemPrice"/></span>
 						</div>
 						<div class="item-select">
 							<s:form action="ItemSelectAction" theme="simple">

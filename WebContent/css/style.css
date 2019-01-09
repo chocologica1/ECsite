@@ -120,6 +120,14 @@ body {
 	background-color: rgba(117, 120, 120, 0.7);
 }
 
+.go {
+	background-color: #ff6473;
+}
+
+.go:hover {
+	background-color: rgba(255, 100, 100, 0.7);
+}
+
 /* 戻るリンク */
 .return-button-box {
 	width: 30%;

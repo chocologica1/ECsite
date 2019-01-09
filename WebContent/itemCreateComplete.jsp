@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+	<meta http-equiv="refresh" content="2;URL=/ecsite/AdminAction">
 	<title>商品追加完了</title>
 </head>
 <body>
@@ -17,10 +18,6 @@
 			</div>
 			<div>
 				<h3>商品の登録が完了しました。</h3>
-				<br>
-				<a href='<s:url action="AdminAction"/>'>管理者TOPへ</a>
-				<br><br>
-				<span>続けて商品を登録する場合は</span><a href='<s:url action="ItemCreateAction"/>'>こちら</a>
 			</div>
 		</div>
 	</div>

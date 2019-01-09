@@ -37,10 +37,10 @@
 							<input type="text" name="itemName" class="input-field" autocomplete="off"/>
 							<br>
 							<label>価格</label><br>
-							<input type="text" name="itemPrice" class="input-field number"  autocomplete="off" value="円" />
+							<input type="text" name="itemPrice" class="input-field number"  autocomplete="off" /> 円
 							<br>
 							<label>在庫</label><br>
-							<input type="text" name="itemStock" class="input-field number" autocomplete="off" value="個"/>
+							<input type="text" name="itemStock" class="input-field number" autocomplete="off" /> 個
 						</div>
 						<div class="user-box">
 							<label>画像ファイル名</label><br>

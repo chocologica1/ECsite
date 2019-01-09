@@ -11,6 +11,7 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String itemName;
 	private String itemPrice;
 	private String itemStock;
+	private String imageFileName;
 	private String errorMessage = "";
 	private String itemCreateError = "";
 	private Map<String, Object> session;
@@ -25,6 +26,11 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 			session.put("itemName", itemName);
 			session.put("itemPrice", itemPrice);
 			session.put("itemStock", itemStock);
+			if (imageFileName.equals("")) {
+				session.put("imageFileName", "noimage.jpg");
+			} else {
+				session.put("imageFileName", imageFileName);
+			}
 			result = SUCCESS;
 		}
 
@@ -60,6 +66,14 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 
 	public void setItemStock(String itemStock) {
 		this.itemStock = itemStock;
+	}
+
+	public String getImageFileName() {
+		return imageFileName;
+	}
+
+	public void setImageFileName(String imageFileName) {
+		this.imageFileName = imageFileName;
 	}
 
 	public String getErrorMessage() {

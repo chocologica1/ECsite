@@ -3,15 +3,21 @@
 /* ======item.jsp====== */
 .items-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	flex-wrap:wrap;
-	margin-bottom: 40px;
+}
+
+.items-wrapper::after {
+	content: "";
+	width: 280px;
+	display: block;
 }
 
 .item-box {
-	width: 240px;
+	width: 280px;
 	border: 1px solid #757882;
-	padding: 15px 20px;
+	padding: 20px;
+	margin-bottom: 60px;
 }
 
 .item-image {
@@ -28,7 +34,7 @@
 
 .item-info {
 	font-size: 1.2em;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	display: flex;
 	justify-content: space-around;
 }

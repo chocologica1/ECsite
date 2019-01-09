@@ -5,20 +5,9 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/list.css" />
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 	<title>決済確認</title>
-	<style type="text/css">
-	/* ======横並びボタン======= */
-		.center {
-			display: flex;
-			width: 300px;
-			margin: 0 auto;
-		}
-
-		.button {
-			width: 150px;
-		}
-	</style>
 </head>
 <body>
 	<jsp:include page="header.jsp" flush="true" />
@@ -31,7 +20,7 @@
 				<h3>まだご注文は確定しておりません。</h3>
 			</div>
 			<div>
-				<table border="1">
+				<table>
 					<tr>
 						<th>商品名</th>
 						<th>値段</th>
@@ -69,15 +58,15 @@
 				</table>
 			</div>
 			<div>
-				<div class="center">
-					<div class="button">
+				<div class="center-flex-box">
+					<div class="flex-button-box">
 						<s:form action="PurchaseAction">
-							<s:submit value="決済方法を修正する"/>
+							<s:submit value="決済方法を修正する" cssClass="button back"/>
 						</s:form>
 					</div>
-					<div class="button">
+					<div class="flex-button-box">
 						<s:form action="PurchaseCompleteAction">
-							<s:submit value="注文を確定する" cssClass="purchase-button"/>
+							<s:submit value="注文を確定する" cssClass="button"/>
 						</s:form>
 					</div>
 				</div>
