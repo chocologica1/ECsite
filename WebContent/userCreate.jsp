@@ -43,26 +43,25 @@
 					<!-- 入力フォーム -->
 					<div class="color-box">
 						<s:form action="UserCreateConfirmAction" cssClass="form-box">
-							<label>ログインID</label>
+							<label>ログインID</label><br>
+							<input type="text" name="loginUserId" autocomplete="off" class="input-field" />
 							<br>
-							<input type="text" name="loginUserId" autocomplete="off"
-								class="input-field" />
+							<label>パスワード</label><br>
+							<input type="password" name="loginPassword" autocomplete="new-password" class="input-field" />
 							<br>
-							<label>パスワード</label>
-							<br>
-							<input type="password" name="loginPassword"
-								autocomplete="new-password" class="input-field" />
-							<br>
-							<label>ユーザー名</label>
-							<br>
-							<input type="text" name="userName" autocomplete="off"
-								class="input-field" />
+							<label>ユーザー名</label><br>
+							<input type="text" name="userName" autocomplete="off" class="input-field" />
 							<br>
 							<div class="center-button-box">
 								<s:submit value="登録" cssClass="button" />
 							</div>
 						</s:form>
 					</div>
+					<s:if test="#session.containsKey('adminId')">
+						<s:form action="AdminAction" cssClass="return-button-box">
+							<s:submit value="＞管理者トップに戻る" cssClass="return-button" />
+						</s:form>
+					</s:if>
 				</s:else>
 			</div>
 		</div>

@@ -70,9 +70,9 @@
 							</s:form>
 						</s:elseif>
 					</div>
-					<div class="itemselect-box">
+					<div class="return-button-box">
 						<s:form action="ItemAction">
-							<s:submit value="＞商品一覧へもどる" cssClass="itemselect-button"/>
+							<s:submit value="＞商品一覧へもどる" cssClass="return-button"/>
 						</s:form>
 					</div>
 				</div>

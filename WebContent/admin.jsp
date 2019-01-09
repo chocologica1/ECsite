@@ -42,6 +42,11 @@
 					</div>
 				</div>
 			</div>
+			<div>
+				<s:form action="AdminLogoutAction" cssClass="return-button-box">
+					<s:submit value="＞管理者ログアウト" cssClass="return-button" />
+				</s:form>
+			</div>
 		</div>
 	</div>
 	<jsp:include page="footer.jsp" flush="true"/>
