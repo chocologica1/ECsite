@@ -12,6 +12,7 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String itemPrice;
 	private String itemStock;
 	private String errorMessage = "";
+	private String itemCreateError = "";
 	private Map<String, Object> session;
 
 	//executeメソッド
@@ -67,6 +68,10 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
+	}
+
+	public String getItemCreateError() {
+		return itemCreateError;
 	}
 
 	public Map<String, Object> getSession() {

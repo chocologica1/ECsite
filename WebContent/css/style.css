@@ -54,14 +54,6 @@ body {
 	padding-bottom: 1em;
 }
 
-/* table { */
-/* 	margin: 10px auto; */
-/* } */
-
-/* td, th { */
-/* 	padding: 1px 2px; */
-/* } */
-
 /* メッセージ */
 .error, .info {
 	width: 100%;
@@ -105,6 +97,7 @@ body {
 	cursor: pointer;
 }
 
+/* 横並びボタン */
 .center-flex-box {
 	padding-top: 20px;
 	display: flex;
@@ -117,13 +110,39 @@ body {
 	width: 40%;
 }
 
-/* 入力欄 */
-input {
-	outline: 0;
+/* キャンセルボタン */
+.back {
+	letter-spacing: 1px;
+	background-color: #757882;
 }
 
-.textfield:focus, .input-field:focus {
-	border: 1px solid #ff6473;
+.back:hover {
+	background-color: rgba(117, 120, 120, 0.7);
+}
+
+/* 戻るリンク */
+.return-button-box {
+	width: 30%;
+	margin-left: auto;
+	margin-top: 20px;
+}
+
+.return-button {
+	width: 100%;
+	border: none;
+	background-color: #faf9f9;
+	color: #ff6473;
+	font-size: 14px;
+	text-align: right;
+}
+
+.return-button:hover {
+	cursor: pointer;
+}
+
+/* 入力欄 */
+input:focus {
+	outline: 0;
 }
 
 table {
@@ -132,7 +151,7 @@ table {
 	margin-bottom: 40px;
 }
 
-/* ======home.jsp===== */
+/* ====== home.jsp / myPage.jsp ===== */
 .welcome-message {
 	padding-top: 40px;
 	font-size: 15px;

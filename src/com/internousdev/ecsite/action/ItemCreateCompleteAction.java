@@ -10,6 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ItemCreateCompleteAction extends ActionSupport implements SessionAware {
 	//フィールド
 	private Map<String,Object> session;
+	private String errorMessage = "";
 	private String itemCreateError = "";
 
 	//executeメソッド
@@ -41,6 +42,10 @@ public class ItemCreateCompleteAction extends ActionSupport implements SessionAw
 	@Override
 	public void setSession(Map<String,Object> session) {
 		this.session = session;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
 	}
 
 	public String getItemCreateError() {

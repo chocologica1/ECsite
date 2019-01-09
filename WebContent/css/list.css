@@ -1,16 +1,11 @@
 @charset "UTF-8";
 
-/* カート */
-/* 購入履歴 */
-/* 商品管理 */
-/* ユーザー管理 */
-
 /**
- * itemList.jsp
- *
- *
- *
- *
+ * itemList(DeleteConfirm).jsp
+ * userList(DeleteConfirm).jsp
+ * purchaseHistory(DeleteConfirm).jsp
+ * myCart未
+ * purchase未
  */
 
 table, td, th {
@@ -40,23 +35,4 @@ td {
 
 .center-button-box {
 	width: 30%;
-}
-
-.return-button-box {
-	width: 30%;
-	margin-left: auto;
-	margin-top: 20px;
-}
-
-.return-button {
-	width: 100%;
-	border: none;
-	background-color: #faf9f9;
-	color: #ff6473;
-	font-size: 14px;
-	text-align: right;
-}
-
-.return-button:hover {
-	cursor: pointer;
 }

@@ -6,6 +6,7 @@
  * userCreate.jsp
  * userCreateConfirm.jsp
  * admin.jsp
+ * itemCreate.jsp
  */
 
 .color-box {
@@ -26,28 +27,7 @@
 
 .user-box {
 	border-left: 1px solid  rgba(117, 120, 120, 0.5);
-}
-
-.title {
-	color: #757882;
-}
-
-.sentence {
-	padding-bottom: 1.5em;
-}
-
-label {
-	color: #757882;
-}
-
-.input-field {
-	width: 100%;
-	height: 3em;
-	padding-left: 1em;
-	margin-bottom: 1em;
-	background-color: #faf9f9;
-	border: none;
-	font-size: 1em;
+	position:relative;
 }
 
 .form-box {
@@ -66,6 +46,28 @@ label {
 	border-collapse: separate;
 }
 
+.title {
+	color: #757882;
+}
+
+label {
+	color: #757882;
+}
+
+.input-field {
+	width: 100%;
+	height: 3em;
+	padding: 0 1em;
+	margin-bottom: 1em;
+	background-color: #faf9f9;
+	border: none;
+	font-size: 1em;
+}
+
+.input-field:focus {
+	border: 1px solid #ff6473;
+}
+
 tr {
 	margin-bottom: 1px;
 }
@@ -82,17 +84,31 @@ td:first-child {
 	border: none;
 }
 
-.back {
-	letter-spacing: 1px;
-	background-color: #757882;
+/*====== login.jsp ======*/
+.sentence {
+	padding-bottom: 1.5em;
 }
 
-.back:hover {
-	background-color: rgba(117, 120, 120, 0.7);
-}
-
+/*====== admin.jsp =======*/
 .center {
 	width: 80%;
 	margin: auto;
 	text-align: center;
+}
+
+/*====== itemCreate.jsp ======*/
+.number {
+	text-align: right;
+}
+
+.category-select {
+	font-size: 0.8em;
+	height: 3em;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 1em;
+	left: 0;
+	right: 0;
 }

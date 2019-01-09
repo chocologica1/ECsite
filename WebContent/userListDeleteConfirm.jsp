@@ -5,22 +5,10 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/list.css" />
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 	<title>ユーザー削除確認</title>
 </head>
-	<style type="text/css">
-		.center {
-			display: flex;
-			width: 160px;
-			margin: auto;
-		}
-
-		.button {
-			width: 80px;
-			padding-bottom: 30px;
-		}
-
-	</style>
 <body>
 	<jsp:include page="header.jsp" flush="true" />
 	<div id="main">
@@ -30,7 +18,8 @@
 			</div>
 			<div>
 				<h3>以下のユーザーを削除します。よろしいですか。</h3>
-				<table border="1">
+				<br>
+				<table>
 					<tr>
 						<th>ログインID</th>
 						<th>パスワード</th>
@@ -56,21 +45,23 @@
 				</table>
 			</div>
 			<div>
-				<div class="center">
-					<div class="button">
+				<div class="center-flex-box">
+					<div class="flex-button-box">
 						<s:form action="UserListAction">
-							<s:submit value="キャンセル"/>
+							<s:submit value="キャンセル" cssClass="button back"/>
 						</s:form>
 					</div>
-					<div class="button">
+					<div class="flex-button-box">
 						<s:form action="UserListDeleteCompleteAction">
-							<s:submit value="OK"/>
+							<s:submit value="OK" cssClass="button"/>
 						</s:form>
 					</div>
 				</div>
 			</div>
 			<div>
-				管理者TOPへ戻る場合は<a href='<s:url action="AdminAction"/>'>こちら</a>
+				<s:form action="AdminAction" cssClass="return-button-box">
+					<s:submit value="＞管理者トップに戻る" cssClass="return-button" />
+				</s:form>
 			</div>
 		</div>
 	</div>

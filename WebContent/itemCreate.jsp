@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/form.css"/>
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 	<title>商品追加</title>
 </head>
@@ -29,27 +30,34 @@
 					</div>
 				</s:if>
 
-				<table>
-					<s:form action="ItemCreateConfirmAction">
-						<tr>
-							<td>商品名</td>
-							<td><input type="text" name="itemName" class="textfield"/></td>
-						</tr>
-						<tr>
-							<td>値段</td>
-							<td><input type="text" name="itemPrice" class="textfield"/>円</td>
-						</tr>
-						<tr>
-							<td>在庫数</td>
-							<td><input type="text" name="itemStock" class="textfield"/>個</td>
-						</tr>
-						<s:submit value="登録"/>
-					</s:form>
-				</table>
-			</div>
-			<div>
-				<br>
-				<span>管理者TOPへ戻る場合は</span><a href='<s:url action="AdminAction"/>'>こちら</a>
+				<s:form action="ItemCreateConfirmAction">
+					<div class="color-box login-wrapper">
+						<div class="login-box">
+							<label>商品名</label><br>
+							<input type="text" name="itemName" class="input-field" autocomplete="off"/>
+							<br>
+							<label>価格</label><br>
+							<input type="text" name="itemPrice" class="input-field number"  autocomplete="off" value="円" />
+							<br>
+							<label>在庫</label><br>
+							<input type="text" name="itemStock" class="input-field number" autocomplete="off" value="個"/>
+						</div>
+						<div class="user-box">
+							<label>画像ファイル名</label><br>
+							<input type="text" name="imageFileName" class="input-field" autocomplete="off" placeholder="noimage.jpg"/>
+							<br>
+<!-- 							<label>カテゴリー</label><br> -->
+<%-- 							<s:select name="categoryId" cssClass="category-select" --%>
+<%-- 								list="categoryList" listValue="categoryName" listKey="categoruId"/> --%>
+							<div class="center-button-box bottom">
+								<s:submit value="登録" cssClass="button"/>
+							</div>
+						</div>
+					</div>
+				</s:form>
+				<s:form action="AdminAction" cssClass="return-button-box">
+					<s:submit value="＞管理者トップに戻る" cssClass="return-button" />
+				</s:form>
 			</div>
 		</div>
 	</div>

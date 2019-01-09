@@ -124,21 +124,3 @@ buyitem-image {
 	text-align: right;
 	color: #ff6473;
 }
-
-.itemselect-box {
-	width: 30%;
-	margin-left: auto;
-}
-
-.itemselect-button {
-	width: 100%;
-	border: none;
-	background-color: #faf9f9;
-	color: #ff6473;
-	font-size: 14px;
-	text-align: right;
-}
-
-.itemselect-button:hover {
-	cursor: pointer;
-}
