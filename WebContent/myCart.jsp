@@ -31,28 +31,40 @@
 						</tr>
 						<s:iterator value="myCartList">
 							<tr>
-								<td><img src='./image/item/<s:property value="id"/>.png'
-									class="cart-image" alt="item" /></td>
-								<td><a
-									href='<s:url action="ItemSelectAction"><s:param name="id" value="myCartList.id"/></s:url>'
-									class="item-link"><s:property value="itemName" /></a></td>
-								<td><s:property value="itemPrice" /></td>
+								<td>
+									<div class="item-image">
+										<img src='./image/item/<s:property value="id"/>.png' class="image" alt="item" />
+									</div>
+								</td>
+								<td>
+									<a href='<s:url action="ItemSelectAction"><s:param name="id" value="myCartList.id"/></s:url>'
+										class="item-link"><s:property value="itemName" /></a>
+								</td>
+								<td>¥<s:property value="itemPrice" /></td>
 								<td><s:property value="count" /></td>
-								<td><s:property value="totalPrice" /></td>
+								<td>¥<s:property value="totalPrice" /></td>
 								<td><s:property value="insertDate" /></td>
-								<td><s:form action="MyCartDeleteConfirmAction"
-										theme="simple">
-										<input type="hidden" value='<s:property value="userCartId"/>'
-											name="deleteCartId" />
+								<td>
+									<s:form action="MyCartDeleteConfirmAction">
+										<input type="hidden" value='<s:property value="userCartId"/>' name="deleteCartId" />
 										<s:submit value="削除" />
-									</s:form></td>
+									</s:form>
+								</td>
 							</tr>
 						</s:iterator>
 					</table>
-					<s:form action="MyCartDeleteConfirmAction" cssClass="center-button-box">
-							<s:hidden value="all" name="deleteCartId" />
-							<s:submit value="カートを空にする" cssClass="button back"/>
-					</s:form>
+					<div class="flex-container">
+						<div class="purchase-price">
+							<s:action name="PurchaseAction"/>
+							<p>合計　¥<s:property value="#session.purchasePrice"/><p>
+						</div>
+						<div class="button-box">
+							<s:form action="MyCartDeleteConfirmAction">
+									<s:hidden value="all" name="deleteCartId" />
+									<s:submit value="カートを空にする" cssClass="button back"/>
+							</s:form>
+						</div>
+					</div>
 				</div>
 				<div>
 					<div class="center-flex-box">
