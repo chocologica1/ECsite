@@ -4,31 +4,33 @@
 .items-wrapper {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap:wrap;
 	margin-bottom: 40px;
 }
 
 .item-box {
-	width: 200px;
+	width: 240px;
 	border: 1px solid #757882;
-	margin: 0 10px;
-	padding: 10px;
+	padding: 15px 20px;
 }
 
 .item-image {
-	width: 100%;
-	height: auto;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	margin-bottom: 15px;
 }
 
 .image {
 	width: 100%;
+	height: 100%;
 }
 
-.purchase-button {
-	/* 	background-color: #ff6473; ピンク*/
-	background-color: #ff9234; /*オレンジ*/
-	border-style: none;
-	padding: 4px;
-	width: 80px;
+.item-info {
+	font-size: 1.2em;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-around;
 }
 
 /* ======buyItem.jsp====== */
