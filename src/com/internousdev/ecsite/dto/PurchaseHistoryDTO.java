@@ -4,6 +4,7 @@ public class PurchaseHistoryDTO {
 	//フィールド
 	private String userBuyItemId;
 	private String itemName;
+	private String itemPrice;
 	private String totalPrice;
 	private String count;
 	private String payment;
@@ -22,6 +23,12 @@ public class PurchaseHistoryDTO {
 	}
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
+	}
+	public String getItemPrice() {
+		return itemPrice;
+	}
+	public void setItemPrice(String itemPrice) {
+		this.itemPrice = itemPrice;
 	}
 	public String getTotalPrice() {
 		return totalPrice;

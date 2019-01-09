@@ -18,7 +18,7 @@ public class PurchaseHistoryDAO {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		//SQL文
-		String sql = "SELECT ubit.id, iit.item_name, ubit.total_price, ubit.total_count, ubit.pay, ubit.insert_date "
+		String sql = "SELECT ubit.id, iit.item_name, iit.item_price, ubit.total_price, ubit.total_count, ubit.pay, ubit.insert_date "
 				+ "FROM user_buy_item_transaction ubit "
 				+ "LEFT JOIN item_info_transaction iit "
 				+ "ON ubit.item_transaction_id = iit.id "
@@ -36,6 +36,7 @@ public class PurchaseHistoryDAO {
 				//DBから取得した値をDTOに値を格納
 				dto.setUserBuyItemId(rs.getString("id"));
 				dto.setItemName(rs.getString("item_name"));
+				dto.setItemPrice(rs.getString("item_price"));
 				dto.setTotalPrice(rs.getString("total_price"));
 				dto.setCount(rs.getString("total_count"));
 				dto.setPayment(rs.getString("pay"));
@@ -60,7 +61,7 @@ public class PurchaseHistoryDAO {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
-		String sql = "SELECT ubit.id, iit.item_name, ubit.total_price, ubit.total_count, ubit.pay, ubit.insert_date "
+		String sql = "SELECT ubit.id, iit.item_name, iit.item_price, ubit.total_price, ubit.total_count, ubit.pay, ubit.insert_date "
 				+ "FROM user_buy_item_transaction ubit "
 				+ "LEFT JOIN item_info_transaction iit "
 				+ "ON ubit.item_transaction_id = iit.id "
@@ -76,6 +77,7 @@ public class PurchaseHistoryDAO {
 				PurchaseHistoryDTO dto = new PurchaseHistoryDTO();
 				dto.setUserBuyItemId(rs.getString("id"));
 				dto.setItemName(rs.getString("item_name"));
+				dto.setItemPrice(rs.getString("item_price"));
 				dto.setTotalPrice(rs.getString("total_price"));
 				dto.setCount(rs.getString("total_count"));
 				dto.setPayment(rs.getString("pay"));
