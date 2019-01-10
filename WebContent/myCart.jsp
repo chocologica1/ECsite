@@ -33,39 +33,38 @@
 							<tr>
 								<td>
 									<div class="item-image">
-										<img src='./image/item/<s:property value="id"/>.png' class="image" alt="item" />
+										<img src='./image/item/<s:property value="id"/>.png'
+											class="image" alt="item" />
 									</div>
 								</td>
-								<td>
-									<a href='<s:url action="ItemSelectAction"><s:param name="id" value="myCartList.id"/></s:url>'
-										class="item-link"><s:property value="itemName" /></a>
-								</td>
+								<td><a
+									href='<s:url action="ItemSelectAction"><s:param name="id" value="myCartList.id"/></s:url>'
+									class="item-link"><s:property value="itemName" /></a></td>
 								<td>¥<s:property value="itemPrice" /></td>
 								<td><s:property value="count" /></td>
 								<td>¥<s:property value="totalPrice" /></td>
 								<td><s:property value="insertDate" /></td>
-								<td>
-									<s:form action="MyCartDeleteConfirmAction">
-										<input type="hidden" value='<s:property value="userCartId"/>' name="deleteCartId" />
+								<td><s:form action="MyCartDeleteConfirmAction">
+										<input type="hidden" value='<s:property value="userCartId"/>'
+											name="deleteCartId" />
 										<s:submit value="削除" />
-									</s:form>
-								</td>
+									</s:form></td>
 							</tr>
 						</s:iterator>
 					</table>
 					<div class="flex-container">
 						<div class="purchase-price">
-							<s:action name="PurchaseAction"/>
-							<p>合計　¥<s:property value="#session.purchasePrice"/><p>
+							<s:action name="PurchaseAction" />
+							<p>合計 ¥<s:property value="#session.purchasePrice" /></p>
 						</div>
 						<div class="button-box">
-							<s:form action="MyCartDeleteConfirmAction">
-									<s:hidden value="all" name="deleteCartId" />
-									<s:submit value="カートを空にする" cssClass="button back"/>
+							<s:form action="PurchaseAction">
+								<s:submit value="レジへ進む" cssClass="button go" />
 							</s:form>
 						</div>
 					</div>
 				</div>
+				<br>
 				<div>
 					<div class="center-flex-box">
 						<div class="flex-button-box">
@@ -74,8 +73,9 @@
 							</s:form>
 						</div>
 						<div class="flex-button-box">
-							<s:form action="PurchaseAction">
-								<s:submit value="レジへ進む" cssClass="button go" />
+							<s:form action="MyCartDeleteConfirmAction">
+								<s:hidden value="all" name="deleteCartId" />
+								<s:submit value="カートを空にする" cssClass="button back" />
 							</s:form>
 						</div>
 					</div>
