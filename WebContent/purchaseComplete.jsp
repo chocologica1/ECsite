@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="./css/form.css" />
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 	<title>決済完了</title>
 </head>
@@ -13,16 +14,16 @@
 	<div id="main">
 		<div class="container">
 			<div class="index">
-				<h2>注文完了</h2>
+				<h2>決済完了</h2>
 			</div>
-			<div>
-				<h3>ありがとうございました。</h3>
-				<s:form action="ItemAction">
-					<s:submit value="お買い物を続ける"/>
-				</s:form>
-				<p><a href='<s:url action="MyPageAction"/>'>マイページ</a>で購入履歴の確認ができます。</p>
+			<div class="center">
+				<h3>ご注文ありがとうございました。</h3>
 				<br>
-				<p>ログアウトは<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
+				<p>マイページからご購入履歴の確認ができます。</p>
+				<br>
+				<s:form action="ItemAction" cssClass="center-button-box">
+					<s:submit value="お買い物を続ける" cssClass="button"/>
+				</s:form>
 			</div>
 		</div>
 	</div>

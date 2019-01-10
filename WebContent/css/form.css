@@ -8,6 +8,7 @@
  * admin.jsp
  * itemCreate.jsp
  * itemCreateConfirm.jsp
+ * purchaseConmplete.jsp
  */
 
 .color-box {
@@ -85,16 +86,15 @@ td:first-child {
 	border: none;
 }
 
-/*====== login.jsp ======*/
-.sentence {
-	padding-bottom: 1.5em;
-}
-
-/*====== admin.jsp =======*/
 .center {
 	width: 80%;
 	margin: auto;
 	text-align: center;
+}
+
+/*====== login.jsp ======*/
+.sentence {
+	padding-bottom: 1.5em;
 }
 
 /*====== itemCreate.jsp ======*/

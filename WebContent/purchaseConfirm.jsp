@@ -13,17 +13,16 @@
 	<jsp:include page="header.jsp" flush="true" />
 	<div id="main">
 		<div class="container">
-			<div id="top">
-				<p>ご注文内容確認</p>
+			<div class="index">
+				<h2>ご注文内容確認</h2>
 			</div>
 			<div>
 				<h3>まだご注文は確定しておりません。</h3>
-			</div>
-			<div>
+				<br>
 				<table>
 					<tr>
 						<th>商品名</th>
-						<th>値段</th>
+						<th>価格</th>
 						<th>個数</th>
 						<th>合計金額</th>
 					</tr>
@@ -33,26 +32,24 @@
 								<s:property value="itemName"/>
 							</td>
 							<td>
-								<s:property value="itemPrice"/>
+								¥<s:property value="itemPrice"/>
 							</td>
 							<td>
 								<s:property value="count"/>
 							</td>
 							<td>
-								<s:property value="totalPrice"/>
+								¥<s:property value="totalPrice"/>
 							</td>
 						</tr>
 					</s:iterator>
 				</table>
-				<table>
+				<table class="vertical">
 					<tr>
 						<th>お支払い金額</th>
-						<th></th>
-						<th><s:property value="#session.purchasePrice"/><span>円</span></th>
+						<th>¥<s:property value="#session.purchasePrice"/></th>
 					</tr>
 					<tr>
 						<th>お支払い方法</th>
-						<th></th>
 						<th><s:property value="#session.pay"/></th>
 					</tr>
 				</table>
@@ -61,12 +58,12 @@
 				<div class="center-flex-box">
 					<div class="flex-button-box">
 						<s:form action="PurchaseAction">
-							<s:submit value="決済方法を修正する" cssClass="button back"/>
+							<s:submit value="修正する" cssClass="button back"/>
 						</s:form>
 					</div>
 					<div class="flex-button-box">
 						<s:form action="PurchaseCompleteAction">
-							<s:submit value="注文を確定する" cssClass="button"/>
+							<s:submit value="注文を確定する" cssClass="button go"/>
 						</s:form>
 					</div>
 				</div>

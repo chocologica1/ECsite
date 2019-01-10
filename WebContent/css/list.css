@@ -5,20 +5,21 @@
  * userList(DeleteConfirm).jsp
  * purchaseHistory(DeleteConfirm).jsp
  * myCart.jsp
- * purchase未
+ * purchase.jsp
+ * purchaseConfirm.jsp
  */
 
 table, td, th {
 	border: 1px solid  #DDD;
 }
 
-th {
+tr:first-child {
 	background-color: #add2c9;
 	height: 4em;
 	padding: 1em;
 }
 
-td {
+td, th {
 	padding: 1em;
 }
 
@@ -35,4 +36,53 @@ td {
 
 .center-button-box {
 	width: 30%;
+}
+
+.item-link {
+	color: #5ea3a3;
+	text-decoration: none;
+}
+
+.item-link:hover {
+	text-decoration: underline;
+}
+
+.flex-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.purchase-price {
+	font-size: 2em;
+	text-align: left;
+	padding-left: 1em;
+	line-height: calc(3em / 2);
+}
+
+.button-box {
+	width: 25%;
+}
+
+.select {
+	border: 1px solid #333;
+	padding: 10px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.radio {
+	display: inline-block;
+	text-align: left;
+	margin-top: 5px;
+}
+
+.vertical tr:first-child {
+	background-color: #faf9f9;
+	height: auto;
+}
+
+.vertical th:first-child {
+	background-color: #add2c9;
 }

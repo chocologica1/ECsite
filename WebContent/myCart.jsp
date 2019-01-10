@@ -65,19 +65,17 @@
 					</div>
 				</div>
 				<br>
-				<div>
-					<div class="center-flex-box">
-						<div class="flex-button-box">
-							<s:form action="ItemAction">
-								<s:submit value="お買い物を続ける" cssClass="button" />
-							</s:form>
-						</div>
-						<div class="flex-button-box">
-							<s:form action="MyCartDeleteConfirmAction">
-								<s:hidden value="all" name="deleteCartId" />
-								<s:submit value="カートを空にする" cssClass="button back" />
-							</s:form>
-						</div>
+				<div class="center-flex-box">
+					<div class="flex-button-box">
+						<s:form action="ItemAction">
+							<s:submit value="お買い物を続ける" cssClass="button" />
+						</s:form>
+					</div>
+					<div class="flex-button-box">
+						<s:form action="MyCartDeleteConfirmAction">
+							<s:hidden value="all" name="deleteCartId" />
+							<s:submit value="カートを空にする" cssClass="button back" />
+						</s:form>
 					</div>
 				</div>
 			</s:if>
