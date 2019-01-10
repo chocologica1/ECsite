@@ -5,20 +5,9 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/list.css" />
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 	<title>カート削除確認</title>
-	<style type="text/css">
-	/* ======横並びボタン======= */
-		.center {
-			display: flex;
-			width: 200px;
-			margin: 0 auto;
-		}
-
-		.button {
-			width: 100px;
-		}
-	</style>
 </head>
 <body>
 	<jsp:include page="header.jsp" flush="true" />
@@ -29,7 +18,8 @@
 			</div>
 			<div>
 				<h3>以下の商品を削除します。よろしいですか。</h3>
-				<table border="1">
+				<br>
+				<table>
 					<tr>
 						<th>商品名</th>
 						<th>値段</th>
@@ -57,16 +47,16 @@
 						</tr>
 					</s:iterator>
 				</table>
-				<div class="center">
-					<div class="button">
+				<div class="center-flex-box">
+					<div class="flex-button-box">
 						<s:form action="MyCartAction">
-							<s:submit value="カートに戻る"/>
+							<s:submit value="カートに戻る" cssClass="button back"/>
 						</s:form>
 					</div>
-					<div class="button">
+					<div class="flex-button-box">
 						<s:form action="MyCartDeleteCompleteAction">
 							<input type="hidden" value='<s:property value="deleteCartId"/>' name="deleteCartId"/>
-							<s:submit value="完了"/>
+							<s:submit value="完了" cssClass="button"/>
 						</s:form>
 					</div>
 				</div>
