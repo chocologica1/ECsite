@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
 	<link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+	<meta http-equiv="refresh" content="2;URL=/ecsite/MyCartAction"/>
 	<title>カート削除完了</title>
 </head>
 <body>
@@ -17,9 +18,6 @@
 			</div>
 			<div>
 				<h3>削除が完了しました。</h3>
-				<s:form action="MyCartAction">
-					<s:submit value="カートをみる"/>
-				</s:form>
 			</div>
 		</div>
 	</div>
